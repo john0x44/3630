@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+    
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark h3">
+            <div class="container">
+           
+            <button 
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            class="navbar-toggler"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div 
+            class="collapse navbar-collapse" 
+            id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active">
+                    <a href="index.html" class="nav-link">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="" class="nav-link">
+                        Skill Details
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="project.html" class="nav-link">
+                        Project Showcase
+                    </a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+  
+
+  <body class="bg-light">
+    <div class="container mt-0">
+        <div class="card shadow">
+            <div class="card-body">
+                <h2 class="text-center fw-bold mb-4">Skill Details</h2>
+                <p>We can explore specific details about databases and SQL focusing on key terminology and their explanations.</p>
+                <div class="mb-4">
+                    <h3 class="fw-bold">Detailed Explanation With SQL</h3>
+                    <ul class="list-group p-2">
+                        <li class="list-group-item" ><strong>Relational Database:</strong> relational database means where data is organized into tables which are made up of rows and columns. 
+                            The tables are related to each other through common data.</li>
+                        <li class="list-group-item"><strong>Record:</strong> A single row in a database table that holds all the data for one item.</li>
+                        <li class="list-group-item"><strong>Schema:</strong> A way to define the structure of a database.</li>
+                        <li class="list-group-item"><strong>Normalization:</strong> Organizing a database so there is no repeated data.</li>
+                        <li class="list-group-item"><strong>Tables:</strong> The database is broken up into tables can use ids to connect to other tables in other words there are relations between them.
+                            A table contains rows and columns, in a database colums are reffered to fields and rows are reffered to as records.
+                            Columns are broken down because they can be easily accessed. Tables can relate to each other via primary keys or references</li>
+                        <li class="list-group-item"><strong>Primary Keys:</strong> primary key minimum number of columns needed to identify a record or in other words a unique identifier for each record in a table which helps to uniquely
+                            identify and access data                        
+                        </li>
+                        <li class="list-group-item"><strong>Foreign Keys:</strong> Links one table to another by referencing the primary key in the other table.</li>
+                        <li class="list-group-item"><strong>Database Diagrams:</strong> A way to view how database is connected for example how tables have relationships between them.</li>
+                        <li class="list-group-item"><strong>Datatypes:</strong> There might be a specific datatype for each column name.</li>
+                        <li class="list-group-item"><strong>Queries:</strong> A request for data from a database.</li>
+                        <li class="list-group-item"><strong>Filtering:</strong> Filtering simply means we are selecting specific rows from a table based on a condition or in other words narrowing down results 
+                            to only show data that you need </li>
+                    </ul>
+                </div>
+                
+                <div class="mb-4">
+                    <h3 class="fw-bold">Techniques</h3>
+                    <h4>Queries</h4>
+                    <ul class="list-group p-2">
+                        <li class="list-group-item"><strong>SELECT:</strong> Retrieves all data from a table<br><code>SELECT * FROM table1</code></li>
+                        <li class="list-group-item"><strong>INSERT:</strong> Adds new data into a table<br><code>INSERT INTO table1 (name, age) VALUES ('John', 24)</code></li>
+                        <li class="list-group-item"><strong>UPDATE:</strong> Changes existing data in a table<br><code>UPDATE table1 SET age = 31 WHERE name = 'John'</code></li>
+                        <li class="list-group-item"><strong>DELETE:</strong> Removes data from a table<br><code>DELETE FROM table1 WHERE name = 'John'</code></li>
+                    </ul>
+                    <h4 class="mt-4">Filtering</h4>
+                    <ul class="list-group p-2">
+                        <li class="list-group-item"><strong>Example:</strong> Retrieve all customers from New York<br><code>SELECT * FROM table1 WHERE State = 'NY'</code></li>
+                        <li class="list-group-item"><strong>NOT Operation:</strong> Get customers not from New York<br><code>SELECT * FROM table1 WHERE State <> 'NY'</code></li>
+                        <li class="list-group-item"><strong>OR Operation:</strong> Get customers from New York or Washington<br><code>SELECT * FROM table1 WHERE State = 'NY' OR State = 'WA'</code></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Joins</h3>
+                    <p>Joins combine data from multiple tables. For example:</p>
+                    <p>If we want to get columns from the table named orders such as order id, order date, order total 
+                        and include a customer name and customer phone column we can use join on the primary key referencing the table customers that has a primary key called customer id 
+                        which has columns with costumer name and customer phone 
+                        we can utilize a JOIN query for example 
+                    <code>
+                        <p>
+                        SELECT OrderID, OrderDate, OrderTotal, CustomerName, Phone <br>
+                        FROM Orders <br>
+                        JOIN Customers <br>
+                        ON Orders.CustomerID = Customers.CustomerID;
+                        </p>
+                    </code>
+                    </p>
+                    <p>This type of join is called an inner join which simply combines rows from two tables based on a matching condition here we are matching with customer id</p>
+                </div>
+
+
+                <div>
+                    <h3 class="fw-bold">Benefits & How It Was Mastered</h3>
+                </p>
+                    The benefits of learning SQL and database is essential for developing almost every software as it is most crucial backend process that happens within the software itself.
+                    With SQL you can efficiently and effectively manage, analyze, and modify data allowing for seamless data management capabilities. Mastering this skill is essential for any 
+                    software development project and you have a skill that is beneficial for job opportunities. 
+                <p>
+                </p>
+                    How I mastered this skill was by following youtube tutorials, following SQL documentation, and developing software that requires database processing. Throughout this learning 
+                    process my skill in this area has grown to which has benefitted me in my software development career.
+                <p>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
